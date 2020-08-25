@@ -33,7 +33,7 @@
   "dependencies": {
     "dotenv": "",
     "express": "",
-    "if-env": "",
+    "if-env": "^1.0.4",
     "mongoose": "",
     "morgan": ""
   },
