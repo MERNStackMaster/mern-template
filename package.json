@@ -1,0 +1,44 @@
+{
+  "name": "mern-template",
+  "version": "1.0.0",
+  "description": "A simple MERN stack template to bootstrap your projects.",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MERNStackMaster/mern-template.git"
+  },
+  "keywords": [
+    "MERN",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node"
+  ],
+  "author": "MERNStackMaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MERNStackMaster/mern-template/issues"
+  },
+  "homepage": "https://github.com/MERNStackMaster/mern-template#readme",
+  "dependencies": {
+    "dotenv": "",
+    "express": "",
+    "if-env": "",
+    "mongoose": "",
+    "morgan": ""
+  },
+  "devDependencies": {
+    "concurrently": "",
+    "nodemon": ""
+  }
+}
