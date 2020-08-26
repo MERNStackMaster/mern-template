@@ -23,9 +23,14 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api', require('./routes/apiRoutes'));
 
 /***************** 
-* Ideally, before using this repo, delete `client` folder, and run:
-* `npx create-react-app client` (inside the mern-template folder)
-******************/
+ * 
+ * Before using this repo, delete `client` folder, and run:
+ * `npx create-react-app client` (inside the mern-template folder)
+ *
+ * Also, to ensure you have the latest packages, uninstall and
+ * reinstall all packages, making sure to keep dev dependencies as such
+ * 
+ ******************/
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, './client/build/index.html'));
